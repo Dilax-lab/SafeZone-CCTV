@@ -6,6 +6,28 @@
     --dark: #120F2D;
 }
 
+/* Prevent horizontal scroll globally */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Prevent sections/containers from overflowing */
+section, .container, .row {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 [class^=flaticon-]:before,
 [class*=" flaticon-"]:before,
 [class^=flaticon-]:after,
@@ -85,23 +107,38 @@ h6,
     bottom: 45px;
     z-index: 99;
 }
+
+/* CONTENT SECTION FIX */
 .content {
-  padding-left: 200px;
+    padding-left: 200px;
 }
 
+/* Responsive padding for .content */
 @media screen and (max-width: 768px) {
-  .content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-.html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    .content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 
-
+@media screen and (max-width: 480px) {
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Jost', sans-serif;
@@ -148,7 +185,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-left: 0;
         padding: 10px 0;
     }
